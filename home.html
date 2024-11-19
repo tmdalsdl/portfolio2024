@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/homestyle.css">
+</head>
+<body>
+    <header class="header">
+        <h1>안녕하세요! 저는 이승민입니다</h1>
+        <p>클라우드 운영 전문가</p>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-item">
+                <h3>사진</h3>
+                <img src="path_to_photo.jpg" alt="사진" class="about-photo">
+            </div>
+            <div class="about-item">
+                <h3>내용1</h3>
+                <p>내용 추가1</p>
+            </div>
+            <div class="about-item">
+                <h3>내용2</h3>
+                <p>내용 추가2</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="section">
+        <h2>My Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <h3>프로젝트 1</h3>
+                    <p> splunk를 활용한 트래픽 확인</p>
+                    <div class="skills">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <h3>프로젝트 2</h3>
+                    <p>AWS를 활용한 동영상 제공 플랫폼</p>
+                    <div class="skills">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">terraform</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <!--
+        <form class="contact-form">
+            <input type="text" placeholder="이름" required>
+            <input type="email" placeholder="이메일" required>
+            <textarea placeholder="메시지" rows="5" required></textarea>
+            <button type="submit">보내기</button>
+        </form>
+        -->
+    </section>
+    <script src="script/homescript.js"></script>
+</body>
+</html>
