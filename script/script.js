@@ -1,52 +1,88 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
     let currentSection = 0;
     let isScrolling = false;
+    const scrollDelay = 750;
 
-    // 네비게이션 활성화 업데이트
+    // 스크롤 방지 함수
+    const preventDefault = (e) => {
+        e.preventDefault();
+    };
+
+    // 터치 이벤트 방지
+    const preventTouchMove = (e) => {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    };
+
+    // 스크롤 이벤트 비활성화
+    document.addEventListener('wheel', preventDefault, { passive: false });
+    document.addEventListener('touchmove', preventTouchMove, { passive: false });
+
     const updateNavigation = (sectionId) => {
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === sectionId) {
-                link.classList.add('active');
+            if (!link.getAttribute('href').includes('index.html')) {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === sectionId) {
+                    link.classList.add('active');
+                }
             }
         });
     };
 
-    // 휠 이벤트 처리
+    const scrollToSection = (index) => {
+        if (isScrolling) return;
+        if (index >= 0 && index < sections.length) {
+            isScrolling = true;
+            currentSection = index;
+            
+            sections[currentSection].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            updateNavigation(sections[currentSection].id);
+            
+            setTimeout(() => {
+                isScrolling = false;
+            }, scrollDelay);
+        }
+    };
+
     window.addEventListener('wheel', (e) => {
         e.preventDefault();
         
-        if (isScrolling) return;
-        isScrolling = true;
-
-        if (e.deltaY > 0 && currentSection < sections.length - 1) {
-            currentSection++;
-        } else if (e.deltaY < 0 && currentSection > 0) {
-            currentSection--;
+        if (!isScrolling) {
+            const direction = e.deltaY > 0 ? 1 : -1;
+            const nextSection = currentSection + direction;
+            scrollToSection(nextSection);
         }
-
-        const targetSection = sections[currentSection];
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-        updateNavigation(targetSection.id);
-
-        setTimeout(() => {
-            isScrolling = false;
-        }, 500);
     }, { passive: false });
 
-    // 네비게이션 클릭 이벤트
-    navLinks.forEach((link, index) => {
+    navLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
+            if (link.getAttribute('href').includes('index.html')) {
+                return; // Home 링크는 기본 동작 유지
+            }
             e.preventDefault();
-            currentSection = index;
-            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
-            updateNavigation(sections[currentSection].id);
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            const sectionIndex = Array.from(sections).indexOf(targetSection);
+            
+            if (sectionIndex !== -1) {
+                scrollToSection(sectionIndex);
+            }
         });
     });
 
-    // 초기 활성화
+    // 키보드 이벤트 처리
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            e.preventDefault();
+        }
+    });
+
     updateNavigation(sections[0].id);
 });
