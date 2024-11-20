@@ -85,4 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateNavigation(sections[0].id);
+
+    // 페이지 로드 완료 시 트랜지션 적용
+    document.body.classList.add('loaded');
+    
+    // 홈 아이콘 클릭 시 트랜지션 처리
+    document.querySelector('.home-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.remove('loaded');
+        
+        setTimeout(function() {
+            window.location.href = e.target.closest('a').href;
+        }, 300);
+    });
 });

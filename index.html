@@ -8,7 +8,7 @@
 <body>
     <header class="header">
         <h1>안녕하세요! 저는 이승민입니다</h1>
-        <p>클라우드 운영 전문가</p>
+        <p>클라우드 엔지니어</p>
     </header>
     <nav class="nav">
         <ul>
@@ -22,56 +22,109 @@
         <div class="about-container">
             <div class="about-item">
                 <h3>사진</h3>
-                <img src="path_to_photo.jpg" alt="사진" class="about-photo">
+                <img src="image/ID_Photo.png" alt="사진" class="about-photo">
             </div>
             <div class="about-item">
-                <h3>내용1</h3>
-                <p>내용 추가1</p>
+                <h3>교육이수</h3><br><br>
+                <ul>
+                    <li>2023.06.28 ~ 2023.11.31 (5개월/888시간)<br>
+                    자바 웹개발 양성과정(백엔드, 프론트엔드)</li><br>
+                    <li>2024.04.15 ~ 2024.10.18 (6 개월)<br>
+                        양주 클라우드 운영 전문가 양성과정</li>
+                </ul>
             </div>
             <div class="about-item">
-                <h3>내용2</h3>
-                <p>내용 추가2</p>
+                <h3>이력서 및 포트폴리오</h3><br><br>
+                <ul>
+                    <li>이력서(docx)<br>
+                    <a href="files/이력서_자기소개서.docx">이력서&자기소개서</a></li>
+                    <br>
+                    <li>포트폴리오(PPT)<br>
+                    <a href="files/포트폴리오.ppt">포트폴리오</a></li>
+                </ul>
             </div>
         </div>
     </section>
     <section id="portfolio" class="section">
         <h2>My Projects</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-content">
-                    <h3>프로젝트 1</h3>
-                    <p> splunk를 활용한 트래픽 확인</p>
-                    <div class="skills">
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Python</span>
+        <!-- Cloud Related Projects -->
+        <div class="project-category">
+            <h3>Cloud Related Projects</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h4>프로젝트 1</h4>
+                        <p>Splunk를 활용한 트래픽 확인</p>
+                        <div class="skills">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h4>프로젝트 2</h4>
+                        <p>AWS를 활용한 동영상 제공 플랫폼</p>
+                        <div class="skills">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <div class="portfolio-content">
-                    <h3>프로젝트 2</h3>
-                    <p>AWS를 활용한 동영상 제공 플랫폼</p>
-                    <div class="skills">
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">terraform</span>
-                        <span class="skill-tag">AWS</span>
+        </div>
+        <br>
+        <!-- Web Development Projects -->
+        <div class="project-category">
+            <h3>Web Development Projects</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h4>프로젝트 1</h4>
+                        <p>React를 사용한 SPA 웹사이트</p>
+                        <div class="skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h4>프로젝트 2</h4>
+                        <p>Django로 구현한 블로그 웹사이트</p>
+                        <div class="skills">
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">HTML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-content">
+                        <h4>프로젝트 3</h4>
+                        <p>Node.js로 구현한 API 서버</p>
+                        <div class="skills">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <!--
-        <form class="contact-form">
-            <input type="text" placeholder="이름" required>
-            <input type="email" placeholder="이메일" required>
-            <textarea placeholder="메시지" rows="5" required></textarea>
-            <button type="submit">보내기</button>
-        </form>
-        -->
+        <h2>Why You Should Hire Me</h2>
+        <p>저는 클라우드 운영 전문가로서 효율적인 시스템 관리와 최적화된 솔루션을 제공할 수 있는 역량을 갖추고 있습니다. <br>
+            AWS, Docker, Kubernetes 등의 기술을 통해 안정적이고 확장 가능한 시스템을 구축하는 경험을 쌓았습니다.</p>
+        <p>귀사의 성장에 기여할 준비가 되어 있으며, 주어진 도전 과제들을 창의적으로 해결하며 팀과 함께 협력할 수 있는 능력을 가지고 있습니다.</p>
+        <p>함께 일할 기회를 주신다면 최선을 다해 성과를 만들어내고, 회사의 성공에 기여하겠습니다. 저에게 연락해 주세요!</p>
+        <p><strong>Email: </strong>your.email@example.com</p>
+        <p><strong>Phone: </strong>+82 10-1234-5678</p>
     </section>
     <script src="script/homescript.js"></script>
 </body>
