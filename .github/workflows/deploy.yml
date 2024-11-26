@@ -18,12 +18,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Sync files to S3 (exclude unnecessary files defined in .gitignore)
+      # 2. Sync files to S3 (exclude unnecessary files)
       - name: Sync files to S3
         uses: jakejarvis/s3-sync-action@master
         with:
           args: |
-            --follow-symlinks --exact-timestamps --delete
+            --follow-symlinks --exact-timestamps --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".gitignore"
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
