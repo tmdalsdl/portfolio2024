@@ -18,16 +18,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Debugging step to check files in workspace
-      - name: List files in workspace
-        run: ls -R
-        working-directory: ${{ github.workspace }}
+      # 2. Add .gitignore file to exclude unnecessary files
+      - name: Create or update .gitignore
+        run: |
+          echo ".git/" >> .gitignore
+          echo ".github/" >> .gitignore
+          echo ".gitignore" >> .gitignore
 
-      # 3. Sync files to S3
+      # 3. Sync files to S3 (exclude unnecessary files, including .gitignore)
       - name: Sync files to S3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --follow-symlinks --exact-timestamps --delete
+          args: |
+            --follow-symlinks --exact-timestamps --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".gitignore"
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
