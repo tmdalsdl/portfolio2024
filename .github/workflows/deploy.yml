@@ -44,3 +44,11 @@ jobs:
       # 4. Debugging step to list files in repository
       - name: List files in repository
         run: ls -R
+
+      # S3 버킷 내 파일 목록 확인
+      - name: List files in S3 bucket
+        run: aws s3 ls s3://${{ secrets.AWS_S3_BUCKET }} --recursive
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
