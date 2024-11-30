@@ -8,15 +8,24 @@
 body {
     background: #f0f2f5;
     color: #333;
-    line-height: 1.6;
+    /*line-height: 1.6;*/
 }
 .header {
     background: linear-gradient(135deg, #6366f1, #a855f7);
     color: white;
     padding: 10px 20px;
+    /*
     text-align: center;
     position: relative;
     overflow: hidden;
+    */
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 중앙 정렬 */
+    max-width: 1200px; /* 필요에 따라 너비 조정 */
+    margin: 0 auto; /* 가운데 정렬 */
 }
 .header h1 {
     font-size: 3em;
@@ -28,34 +37,7 @@ body {
     margin-bottom: 30px;
     animation: fadeInUp 1s ease-out;
 }
-.nav {
-    background: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 30px;
-}
-.nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-.nav a:hover {
-    color: #6366f1;
-}
-.section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 .portfolio-grid {
     display: grid;
@@ -172,6 +154,8 @@ to {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin-top: 40px;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-item {
@@ -184,8 +168,94 @@ to {
 }
 
 .about-photo {
-    width: 100%;
-    max-width: 200px;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-right: 20px; /* Space between image and text */
 }
+
+.intro-text h1 {
+    font-size: 2em;
+}
+.intro-text p {
+    font-size: 1.2em;
+}
+
+/* 교육이수 양식*/
+.education-container {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%; /* 부모 요소의 너비에 맞춤 */
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-right: 2px solid black;
+    flex-direction: column;
+}
+
+.details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.title, .duration, .link {
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.title {
+    border-top-right-radius: 30px;
+}
+
+.link {
+    padding: 10px;
+    border-bottom-right-radius: 30px;
+    border-bottom: none; /* 이 줄을 추가하여 아래쪽 경계선을 제거 */
+    white-space: normal; /* 기본 줄 바꿈 동작 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+}
+
+.title, .duration, .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoimg {
+    width: 100px;
+}
+
+/*
+.nav {
+    background-color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav a:hover {
+    color: #6366f1;
+}
+*/

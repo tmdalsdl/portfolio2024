@@ -8,6 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
 // Redirect to specific project page on portfolio item click
 document.querySelectorAll('.portfolio-content1').forEach((item, index) => {
     item.addEventListener('click', function () {
@@ -15,6 +16,7 @@ document.querySelectorAll('.portfolio-content1').forEach((item, index) => {
         window.location.href = `CloudProject/project${index + 1}.html`;
     });
 });
+
 document.querySelectorAll('.portfolio-content2').forEach((item, index) => {
     item.addEventListener('click', function () {
         // Assuming your project pages follow a naming convention like project1.html, project2.html, etc.

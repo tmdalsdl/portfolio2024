@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 사이드바 로드
     const loadSidebar = () => {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', '../sidebar.html', true);
+        xhr.open('GET', '../partials/sidebar.html', true);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 document.getElementById('sidebar-container').innerHTML = xhr.responseText;
