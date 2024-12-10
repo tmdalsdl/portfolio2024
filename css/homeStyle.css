@@ -52,6 +52,7 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    margin-bottom: 20px;
 }
 
 .portfolio-item:hover {
@@ -62,7 +63,6 @@ body {
 .portfolio-content2 {
     padding: 20px;
     position: relative;
-    display: inline-block; /* 필요에 따라 조정 */
 }
 
 .portfolio-content1 h3,
@@ -76,6 +76,14 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
+    flex: 1;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
 }
 
 .skill-tag {
@@ -83,6 +91,13 @@ body {
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.9em;
+}
+
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
 }
 
 @keyframes fadeInDown {
@@ -236,10 +251,29 @@ to {
     width: 100px;
 }
 
-.likes {
-    width: 10%;
-    height: auto;
+.addLikes {
+    font-size: 24px;  /* 이모지 크기 조절 */
     cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.addLikes:hover {
+    transform: scale(1.1);  /* 호버 효과 */
+}
+
+.addLikes:active {
+    transform: scale(0.9);  /* 클릭 효과 */
+}
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.likes-count {
+    font-size: 14px;
+    color: #666;
 }
 /*
 .nav {
