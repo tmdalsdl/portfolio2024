@@ -5,21 +5,18 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     background: #f0f2f5;
     color: #333;
-    /*line-height: 1.6;*/
 }
+
 .header {
     background: linear-gradient(135deg, #6366f1, #a855f7);
     color: white;
     padding: 10px 20px;
-    /*
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    */
 }
+
 .header-content {
     display: flex;
     align-items: center;
@@ -27,17 +24,18 @@ body {
     max-width: 1200px; /* 필요에 따라 너비 조정 */
     margin: 0 auto; /* 가운데 정렬 */
 }
+
 .header h1 {
     font-size: 3em;
     margin-bottom: 20px;
     animation: fadeInDown 1s ease-out;
 }
+
 .header p {
     font-size: 1.2em;
     margin-bottom: 30px;
     animation: fadeInUp 1s ease-out;
 }
-
 
 .portfolio-grid {
     display: grid;
@@ -98,28 +96,6 @@ body {
     align-items: center;
     gap: 5px;
     margin-left: 10px;
-}
-
-@keyframes fadeInDown {
-from {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-}
-
-@keyframes fadeInUp {
-from {
-    opacity: 0;
-    transform: translateY(20px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
 }
 
 .contact {
@@ -256,6 +232,18 @@ to {
     cursor: pointer;
     display: inline-block;
     transition: transform 0.2s ease;
+    user-select: none;  /* 텍스트 선택 방지 */
+    -webkit-user-select: none;  /* Safari를 위한 설정 */
+    -moz-user-select: none;     /* Firefox를 위한 설정 */
+    -ms-user-select: none;      /* IE/Edge를 위한 설정 */
+    background: none;           /* 배경 제거 */
+    border: none;               /* 테두리 제거 */
+    padding: 0;                 /* 패딩 제거 */
+    outline: none;              /* 아웃라인 제거 */
+}
+
+.addLikes:focus {
+    outline: none;              /* 포커스 시 아웃라인 제거 */
 }
 
 .addLikes:hover {
@@ -275,28 +263,25 @@ to {
     font-size: 14px;
     color: #666;
 }
-/*
-.nav {
-    background-color: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 30px;
-}
-.nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-.nav a:hover {
-    color: #6366f1;
-}
-*/
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+    @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
