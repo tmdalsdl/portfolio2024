@@ -61,6 +61,8 @@ body {
 .portfolio-content1,
 .portfolio-content2 {
     padding: 20px;
+    position: relative;
+    display: inline-block; /* 필요에 따라 조정 */
 }
 
 .portfolio-content1 h3,
@@ -234,6 +236,11 @@ to {
     width: 100px;
 }
 
+.likes {
+    width: 10%;
+    height: auto;
+    cursor: pointer;
+}
 /*
 .nav {
     background-color: white;
