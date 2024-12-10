@@ -91,17 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 사이드바 로드
-    const loadSidebar = () => {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', '../partials/sidebar.html', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                document.getElementById('sidebar-container').innerHTML = xhr.responseText;
-                highlightActiveLink();
-                addHomeLinkEvent();
-            }
-        };
-        xhr.send();
+    const loadSidebar = async () => {
+        try {
+            const response = await fetch('../partials/sidebar.html', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'text/html'
+                }
+            });
+            
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const html = await response.text();
+            document.getElementById('sidebar-container').innerHTML = html;
+            highlightActiveLink();
+            addHomeLinkEvent();
+        } catch (error) {
+            console.error('Error loading sidebar:', error);
+        }
     };
 
     // 현재 페이지 링크 강조
