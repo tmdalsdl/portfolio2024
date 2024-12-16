@@ -1,6 +1,8 @@
 // homeScript.js
 document.addEventListener('DOMContentLoaded', function() {
     let isButtonClicked = false;
+    let lastClickTime = 0;
+    const clickDelay = 5000; // 5초 딜레이
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -59,8 +61,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     //addLikes emoji 클릭 발생 이벤트
     document.querySelectorAll('.addLikes').forEach((emojiSpan, index) => {
-        emojiSpan.addEventListener('click', function(event) {
+        emojiSpan.addEventListener('mousedown', function(event) {
+            event.preventDefault();
             event.stopPropagation();
+            this.classList.add('active');
+        });
+    
+        emojiSpan.addEventListener('mouseup', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            this.classList.remove('active');
+
+            const currentTime = new Date().getTime();
+            if (currentTime - lastClickTime < clickDelay) {
+                return; // 딜레이 시간이 지나지 않았으면 함수 종료
+            }
+            lastClickTime = currentTime;
+
             const buttonId = `likesProject${index + 1}`;
             
             fetch(`https://wihfjpwi54.execute-api.ap-northeast-2.amazonaws.com/portfolio2024/projects`, {
@@ -68,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ id : buttonId })
+                body: JSON.stringify({ id: buttonId })
             })
             .then(response => response.json())
             .then(data => {
@@ -77,21 +94,19 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error:', error));
         });
+    
+        emojiSpan.addEventListener('mouseleave', function(event) {
+            this.classList.remove('active');
+        });
     });
-
-    document.querySelectorAll('.portfolio-content1').forEach((item, index) => {
+    
+    document.querySelectorAll('.portfolio-content1, .portfolio-content2').forEach((item, index) => {
         item.addEventListener('click', function(event) {
-            if (!isButtonClicked) {
-                window.location.href = `CloudProject/project${index + 1}.html`;
+            if (!event.target.closest('.likes-container')) {
+                const projectType = this.classList.contains('portfolio-content1') ? 'CloudProject' : 'WebProject';
+                window.location.href = `${projectType}/project${index + 1}.html`;
             }
         });
     });
-
-    document.querySelectorAll('.portfolio-content2').forEach((item, index) => {
-        item.addEventListener('click', function(event) {
-            if (!isButtonClicked) {
-                window.location.href = `WebProject/project${index + 1}.html`;
-            }
-        });
-    });
+    
 });

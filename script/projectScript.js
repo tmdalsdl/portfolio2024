@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 사이드바 로드
     const loadSidebar = async () => {
         try {
-            const response = await fetch('https://d10imrw8fnfmom.cloudfront.net/partials/sidebar.html', {
+            const response = await fetch('../partials/sidebar.html', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'text/html'

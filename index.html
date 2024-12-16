@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="css/homeStyle.css">
     <link rel="icon" href="data:,">
 </head>
@@ -10,12 +11,33 @@
     <header class="header">
         <div class="header-content">
             <img src="image/ID_Photo.png" alt="사진" class="about-photo">
+            &nbsp;
             <div class="intro-text">
-                <h1>안녕하세요! 저는 이승민입니다</h1>
-                <p>클라우드 엔지니어</p>
+                <h1>이승민</h1>
+                <p>클라우드 엔지니어, 백엔드 엔지니어</p>
+                <div class="contact-info">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <span class="hidden-text">lsm123452002@naver.com</span>
+                        &nbsp;
+                        <i class="fas fa-phone"></i>
+                        <span class="hidden-text">010-2045-7048</span>
+                        &nbsp;
+                        <i class="fab fa-github"></i>
+                        <span class="hidden-text">github.com/tmdalsdl</span>
+                    </p>
+                </div>
             </div>
         </div>
     </header>
+    <!--
+    <nav class="nav">
+        <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    -->
     <br>
     <main class="main-content">
         <div class="about-container">
@@ -23,16 +45,19 @@
                 <h2>My Projects</h2><br>
                 <!-- Project details go here -->
                 <div class="project-category">
-                    <h3>Cloud Projects</h3>
+                    <!-- <h3>Cloud Projects</h3> -->
                     <div class="portfolio-grid">
                         <div class="portfolio-item">
                             <div class="portfolio-content1">
-                                <h4>프로젝트 1</h4>
-                                <p>Splunk를 활용한 트래픽 확인</p>
+                                <h4>AWS 활용한 동영상 플랫폼</h4>
+                                <p>AWS를 활용한 동영상 제공 플랫폼</p>
                                 <div class="skills-container">
                                     <div class="skills">
-                                        <span class="skill-tag">Linux</span>
-                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag"><i class="fab fa-linux" aria-hidden="true"></i>&nbsp;Linux</span>
+                                        <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i>&nbsp;JavaScript</span>
+                                        <span class="skill-tag"><i class="fab fa-python" aria-hidden="true"></i>&nbsp;Django</span>
+                                        <span class="skill-tag"><i class="fas fa-cubes" aria-hidden="true"></i>&nbsp;Terraform</span>
+                                        <span class="skill-tag"><i class="fab fa-aws" aria-hidden="true"></i>&nbsp;AWS</span>
                                     </div>
                                     <div class="likes-container">
                                         <button type="button" class="addLikes" id="likesProject1">👍</button>
@@ -43,8 +68,27 @@
                         </div>
                         <div class="portfolio-item">
                             <div class="portfolio-content1">
-                                <h4>프로젝트 2</h4>
-                                <p>AWS를 활용한 동영상 제공 플랫폼</p>
+                                <h4>portfolio</h4>
+                                <p>s3와 cloudfront를 활용한 포트폴리오</p>
+                                <div class="skills-container">
+                                    <div class="skills">
+                                        <span class="skill-tag"><i class="fab fa-linux" aria-hidden="true"></i>&nbsp;Linux</span>
+                                        <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i>&nbsp;JavaScript</span>
+                                        <span class="skill-tag"><i class="fab fa-python" aria-hidden="true"></i>&nbsp;Django</span>
+                                        <span class="skill-tag"><i class="fas fa-cubes" aria-hidden="true"></i>&nbsp;Terraform</span>
+                                        <span class="skill-tag"><i class="fab fa-aws" aria-hidden="true"></i>&nbsp;AWS</span>
+                                    </div>
+                                    <div class="likes-container">
+                                        <button type="button" class="addLikes" id="likesProject2">👍</button>
+                                        <span class="likes-count">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-content1">
+                                <h4>서버리스</h4>
+                                <p>Lambda와 API Gateway를 활용한 서버리스</p>
                                 <div class="skills-container">
                                     <div class="skills">
                                         <span class="skill-tag">Linux</span>
@@ -54,7 +98,7 @@
                                         <span class="skill-tag">AWS</span>
                                     </div>
                                     <div class="likes-container">
-                                        <button type="button" class="addLikes" id="likesProject2">👍</button>
+                                        <button type="button" class="addLikes" id="likesProject3">👍</button>
                                         <span class="likes-count">0</span>
                                     </div>
                                 </div>
@@ -64,7 +108,7 @@
                 </div>
                 <br>
                 <!-- Web Development Projects -->
-                <div class="project-category">
+                <!-- <div class="project-category">
                     <h3>Web Development Projects</h3>
                     <div class="portfolio-grid">
                         <div class="portfolio-item">
@@ -119,20 +163,21 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="about-item">
-                <h3>이력서 및 포트폴리오</h3><br><br>
-                <ul>
-                    <li>이력서(docx)<br>
-                    <a href="files/이력서_자기소개서.docx">이력서&자기소개서</a></li>
-                    <br>
-                    <li>포트폴리오(PPT)<br>
-                    <a href="files/포트폴리오.ppt">포트폴리오</a></li>
-                </ul>
-                <br>
+                <h2>이력서 및 포트폴리오</h2>
+                <div class="document-links">
+                    <div class="document-item">
+                        <span class="document-type">이력서 (docx)</span>
+                        <a href="files/이력서_자기소개서.docx" class="document-link">이력서&자기소개서</a>
+                    </div>
+                    <div class="document-item">
+                        <span class="document-type">포트폴리오 (PPT)</span>
+                        <a href="files/포트폴리오.ppt" class="document-link">포트폴리오</a>
+                    </div>
+                </div>
                 <h2>자격증</h2>
-                <br>
                 <div class="education-container">
                     <div class="logo">
                         <img src="image/NCA_Logo.png" class="logoimg">
@@ -144,7 +189,7 @@
                             <a href="files/NCA 자격증.pdf">자격증</a>
                         </div>
                     </div>
-                </div><br>
+                </div>
                 <div class="education-container">
                     <div class="logo">
                         <img src="image/SQLD_Logo.png" class="logoimg">
@@ -173,10 +218,10 @@
                             </a>
                         </div>
                     </div>
-                </div><br>
+                </div>
                 <div class="education-container">
                     <div class="logo">
-                        <img src="image/양주시_Logo.png" class="logoimg"><br>
+                        <img src="image/양주시_Logo.png" class="logoimg">
                         <img src="image/양주시청년센터_Logo.png" class="logoimg">
                     </div>
                     <div class="details">
@@ -184,7 +229,7 @@
                         <div class="duration">2024.04.15 ~ 2024.10.18 (6 개월)</div>
                         <div class="link">
                             <a href="files/클라우드캠프_포스터(수정).png">클라우드캠프_포스터</a>
-                            <br>
+                            <span class="link-separator">|</span>
                             <a href="files/[양주 클라우드 캠프] 세부 커리큘럼.pdf">커리큘럼</a>
                         </div>
                     </div>
