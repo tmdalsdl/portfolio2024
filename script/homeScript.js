@@ -104,9 +104,65 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function(event) {
             if (!event.target.closest('.likes-container')) {
                 const projectType = this.classList.contains('portfolio-content1') ? 'CloudProject' : 'WebProject';
-                window.location.href = `${projectType}/project${index + 1}.html`;
+                const projectUrl = `${projectType}/project${index + 1}.html`;
+                
+                fetch(projectUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.text();
+                    })
+                    .then(content => {
+                        // 기존 컨텐츠를 숨기고 새 컨텐츠 준비
+                        const aboutContainer = document.querySelector('.about-container');
+                        if (aboutContainer) {
+                            aboutContainer.style.opacity = '0';
+                            setTimeout(() => {
+                                aboutContainer.style.display = 'none';
+                            }, 300);
+                        }
+                        
+                        // main-content에 새 컨텐츠 추가
+                        const mainContent = document.querySelector('.main-content');
+                        if (mainContent) {
+                            mainContent.innerHTML = '';  // 기존 컨텐츠 제거
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = content;
+                            
+                            // CSS 파일 동적 로드
+                            const styleLink = document.createElement('link');
+                            styleLink.rel = 'stylesheet';
+                            styleLink.type = 'text/css';
+                            styleLink.href = 'css/projectStyle.css';
+                            document.head.appendChild(styleLink);
+                            
+                            const aboutContainer = document.querySelector('.about-container');
+                            if (aboutContainer) {
+                                aboutContainer.style.display = 'none';
+                            }
+                            // 필요한 섹션만 추출
+                            const sections = tempDiv.querySelectorAll('section');
+                            sections.forEach(section => {
+                                mainContent.appendChild(section.cloneNode(true));
+                            });
+                            
+                            // 페이지 상단으로 스크롤
+                            window.scrollTo(0, 0);
+                        }
+                    })
+                    .catch(() => {
+                        console.warn('프로젝트를 불러오는데 실패했습니다.');
+                    });
             }
         });
     });
-    
+    // 브라우저 뒤로가기 처리
+    window.addEventListener('popstate', () => {
+        const mainContent = document.querySelector('.main-content');
+        mainContent.innerHTML = '';
+        
+        const aboutContainer = document.querySelector('.about-container');
+        aboutContainer.style.display = 'block';
+    });
 });

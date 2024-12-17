@@ -5,38 +5,100 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     background: #f0f2f5;
     color: #333;
 }
+
 .header {
     background: linear-gradient(135deg, #6366f1, #a855f7);
     color: white;
     padding: 10px 20px;
-    /*
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    */
-}
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* 중앙 정렬 */
-    max-width: 1200px; /* 필요에 따라 너비 조정 */
-    margin: 0 auto; /* 가운데 정렬 */
-}
-.header h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    animation: fadeInDown 1s ease-out;
-}
-.header p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    animation: fadeInUp 1s ease-out;
 }
 
+.header-content {
+    display: flex;
+    align-items: flex-start; /* 상단 정렬로 변경 */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-photo {
+    width: auto;
+    height: 150px; /* 사진 크기 고정 */
+    margin-right: 20px;
+    object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    position: relative;
+    background-color: white;
+}
+
+.home-link {
+    position: absolute;
+    left: 20px;
+    text-decoration: none;
+}
+
+.home-image {
+    width: 24px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.home-image:hover {
+    transform: scale(1.1);
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;  /* 가운데 정렬을 위해 추가 */
+    padding: 0;
+    gap: 20px;
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.main-menu li a:hover {
+    color: #039be5;
+}
+
+.main-menu li a.active {
+    color: #039be5;
+    border-bottom: 2px solid #039be5;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 상단 정렬 */
+}
+
+.intro-text h1 {
+    font-size: 2em;
+    margin-top: 0; /* 상단 여백 제거 */
+    margin-bottom: 10px; /* 제목 아래 여백 조정 */
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin: 0; /* 기본 여백 제거 */
+    line-height: 1.5; /* 줄 간격 조정 */
+}
 
 .portfolio-grid {
     display: grid;
@@ -172,6 +234,12 @@ to {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    transition: opacity 0.3s ease-out;
+}
+
+.main-content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
 }
 
 .about-item {
@@ -189,19 +257,6 @@ to {
     margin: 20px 0;
     padding-bottom: 10px;
     border-bottom: 2px solid #e5e7eb;
-}
-.about-photo {
-    width: 100px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 10px;
-    margin-right: 20px; /* Space between image and text */
-}
-
-.intro-text h1 {
-    font-size: 2em;
-}
-.intro-text p {
-    font-size: 1.2em;
 }
 
 /* 이력서/포트폴리오 컨테이너*/

@@ -5,28 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let isScrolling = false;
     const scrollDelay = 750;
 
-    // 스크롤 방지 함수
-    const preventDefault = (e) => {
-        e.preventDefault();
-    };
+    // // 스크롤 방지 함수
+    // const preventDefault = (e) => {
+    //     e.preventDefault();
+    // };
 
-    // 터치 이벤트 방지
-    const preventTouchMove = (e) => {
-        if (e.touches.length > 1) {
-            e.preventDefault();
-        }
-    };
+    // // 터치 이벤트 방지
+    // const preventTouchMove = (e) => {
+    //     if (e.touches.length > 1) {
+    //         e.preventDefault();
+    //     }
+    // };
 
-    // 스크롤 제어
-    const disableScroll = () => {
-        document.addEventListener('wheel', preventDefault, { passive: false });
-        document.addEventListener('touchmove', preventTouchMove, { passive: false });
-    };
+    // // 스크롤 제어
+    // const disableScroll = () => {
+    //     document.addEventListener('wheel', preventDefault, { passive: false });
+    //     document.addEventListener('touchmove', preventTouchMove, { passive: false });
+    // };
 
-    const enableScroll = () => {
-        document.removeEventListener('wheel', preventDefault);
-        document.removeEventListener('touchmove', preventTouchMove);
-    };
+    // const enableScroll = () => {
+    //     document.removeEventListener('wheel', preventDefault);
+    //     document.removeEventListener('touchmove', preventTouchMove);
+    // };
 
     // 네비게이션 업데이트
     const updateNavigation = (sectionId) => {
@@ -57,15 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 휠 스크롤 이벤트
-    window.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        if (!isScrolling) {
-            const direction = e.deltaY > 0 ? 1 : -1;
-            const nextSection = currentSection + direction;
-            scrollToSection(nextSection);
-        }
-    }, { passive: false });
+    // // 휠 스크롤 이벤트
+    // window.addEventListener('wheel', (e) => {
+    //     e.preventDefault();
+    //     if (!isScrolling) {
+    //         const direction = e.deltaY > 0 ? 1 : -1;
+    //         const nextSection = currentSection + direction;
+    //         scrollToSection(nextSection);
+    //     }
+    // }, { passive: false });
 
     // 네비게이션 링크 클릭 이벤트
     navLinks.forEach((link) => {
