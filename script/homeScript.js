@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let isButtonClicked = false;
     let lastClickTime = 0;
-    const clickDelay = 5000; // 5초 딜레이
+    const clickDelay = 0; // 좋아요 클릭에 딜레이 없음
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
