@@ -64,6 +64,18 @@ body {
     transform: scale(1.1);
 }
 
+.architecture-img-index {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.architecture-img2-index {
+    width: 48%;
+    max-width: 300px;
+    height: auto;
+}
+
 .about-photo {
     width: auto;
     height: 150px; /* 사진 크기 고정 */
