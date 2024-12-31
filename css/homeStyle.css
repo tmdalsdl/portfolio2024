@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
 body {
@@ -64,18 +64,6 @@ body {
     transform: scale(1.1);
 }
 
-.architecture-img-index {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
-.architecture-img2-index {
-    width: 48%;
-    max-width: 300px;
-    height: auto;
-}
-
 .about-photo {
     width: auto;
     height: 150px; /* 사진 크기 고정 */
@@ -118,6 +106,13 @@ body {
     border: 1px solid #e5e7eb;
 }
 
+.architecture-img-index,
+.architecture-img2-index {
+    width: 48%;
+    max-width: 300px;
+    height: auto;
+}
+
 .portfolio-item:hover {
     transform: translateY(-10px);
 }
@@ -127,6 +122,7 @@ body {
     padding: 20px;
     position: relative;
 }
+
 
 .portfolio-content1 h3,
 .portfolio-content2 h3 {
