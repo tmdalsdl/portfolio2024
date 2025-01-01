@@ -424,3 +424,71 @@ to {
     font-size: 14px;
     color: #666;
 }
+
+/* 보유기술 */
+.skill-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.skill-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.skill-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.skill-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.skill-title {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.skill-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-description {
+    font-size: 14px;
+    color: #666;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.progress {
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}

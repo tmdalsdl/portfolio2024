@@ -13,7 +13,7 @@
         <main class="main-content">
             <section>
                 <div class="section-container">
-                    <h2 class="section-title">서버리스 아키텍처 기반 포트폴리오</h2>
+                    <h2 class="project-title">서버리스 아키텍처 기반 포트폴리오</h2>
                     <div class="skills">
                         <span class="skill-tag"><i class="fab fa-linux" aria-hidden="true"></i>&nbsp;Linux</span>
                         <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i>&nbsp;JavaScript</span>
@@ -29,8 +29,16 @@
                     <div class="modal">
                         <div class="modalBox"></div>
                     </div>
-                    <img src="image/portfolioArchitecture.png" class="architecture-img2">
-                    <img src="image/serverlessArchitecture.png" class="architecture-img2">
+                    <div class="architecture-container">
+                        <figure>
+                            <img src="images/portfolioArchitecture.png" alt="포트폴리오 아키텍처" class="architecture-img">
+                            <figcaption>포트폴리오 아키텍처</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/serverlessArchitecture.png" alt="서버리스 아키텍처" class="architecture-img">
+                            <figcaption>서버리스 아키텍처</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
 
@@ -39,7 +47,7 @@
                     <h2 class="section-title">프로젝트 개요</h2>
                     <div class="content-wrapper1">
                         <div class="subsection">
-                            AWS 클라우드 서비스를 활용한 개인 포트폴리오 웹사이트를 구축했습니다. 정적 웹 호스팅과 서버리스 아키텍처를 결합하여 확장 가능하고 비용 효율적인 웹 애플리케이션을 구현했습니다.
+                            AWS 프리티어 서비스를 활용하여 개인 포트폴리오 웹사이트를 구축했습니다. GitHub Actions를 통한 자동화된 배포 시스템을 구축하여 코드 변경 사항이 실시간으로 반영되는 효율적인 포트폴리오 관리 환경을 구현했습니다.
                         </div>
                     </div>
                 </div>
@@ -59,7 +67,7 @@
                         </div>
 
                         <div class="subsection">
-                            <h3>프론트엔드드</h3>
+                            <h3>프론트엔드</h3>
                             <ul>
                                 <li>HTML/CSS</li>
                                 <li>JavaScript</li>
@@ -92,9 +100,9 @@
                         <div class="subsection">
                             <h3>사용자 인터랙션 기능</h3>
                             <ul>
-                                <li>실시간 좋아요 카운트 업데이트</li>
-                                <li>API Gateway GET/POST 요청 처리</li>
-                                <li>동적 UI 업데이트 구현</li>
+                                <li>좋아요 버튼(이모지) 클릭 시 API Gateway POST 요청 처리</li>
+                                <li>DynamoDB의 좋아요 수 실시간 업데이트</li>
+                                <li>페이지 로딩 시 API Gateway GET 요청으로 현재 좋아요 수 조회</li>
                             </ul>
                         </div>
                     </div>
@@ -106,17 +114,19 @@
                     <h2 class="section-title">차별화 포인트</h2>
                     <div class="content-wrapper2">
                         <div class="subsection">
-                            <h3>비용 효율적 아키텍처</h3>
+                            <h3>효율적인 배포 환경</h3>
                             <ul>
-                                <li>서버리스 아키텍처 채택으로 운영 비용 최소화</li>
-                                <li>CloudFront를 통한 글로벌 콘텐츠 전송 최적화</li>
+                                <li>GitHub Actions를 활용한 자동화된 배포로 수동 작업 최소화</li>
+                                <li>main brunch에 push만으로 실시간 포트폴리오 업데이트 가능</li>
+                                <li>변경 사항의 즉각적인 반영으로 포트폴리오 관리 효율성 향상</li>
                             </ul>
                         </div>
                         <div class="subsection">
-                            <h3>확장 가능한 설계</h3>
+                            <h3>포트폴리오 접근성 향상</h3>
                             <ul>
-                                <li>API Gateway와 Lambda를 통한 서버리스 백엔드 구현</li>
-                                <li>DynamoDB를 활용한 확장 가능한 데이터 저장소</li>
+                                <li>PDF 대신 웹페이지 형식을 채택하여 즉각적인 업데이트와 접근 용이</li>
+                                <li>모바일 환경에서도 원활한 확인 가능</li>
+                                <li>프로젝트별 좋아요 기능으로 관심도 파악 가능</li>
                             </ul>
                         </div>
                     </div>
