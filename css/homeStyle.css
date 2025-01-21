@@ -64,6 +64,11 @@ body {
     transform: scale(1.1);
 }
 
+.home-text{
+    font-size: 20px;
+    color: white;
+}
+
 .about-photo {
     width: auto;
     height: 150px; /* 사진 크기 고정 */
