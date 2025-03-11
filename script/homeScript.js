@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let isButtonClicked = false;
     let lastClickTime = 0;
     const clickDelay = 0; // 좋아요 클릭에 딜레이 없음
+    // CloudProject와 WebProject의 인덱스를 따로 관리
+    let cloudIndex = 0;
+    let webIndex = 0;
+    
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -102,9 +106,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.querySelectorAll('.portfolio-content1, .portfolio-content2').forEach((item, index) => {
         item.addEventListener('click', function(event) {
+            
             if (!event.target.closest('.likes-container')) {
                 const projectType = this.classList.contains('portfolio-content1') ? 'CloudProject' : 'WebProject';
-                const projectUrl = `${projectType}/project${index + 1}.html`;
+                let projectIndex;
+                
+                if (projectType === 'CloudProject') {
+                    cloudIndex = index + 1; // CloudProject 인덱스 증가
+                    projectIndex = cloudIndex;
+                } else {
+                    webIndex = index - 1; // WebProject 인덱스 증가
+                    projectIndex = webIndex;
+                }
+                
+                const projectUrl = `${projectType}/project${projectIndex}.html`;
                 
                 fetch(projectUrl)
                     .then(response => {

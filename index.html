@@ -47,14 +47,19 @@
         <div class="about-container">
             <div class="about-item">
                 <h2>Projects</h2>
+                <div class="sticky-nav-container">
+                    <a href="#cloud" class="sticky-nav">Cloud Project</a>
+                    <a href="#backend" class="sticky-nav">Backend Project</a>
+                </div>                
                 <!-- Project details go here -->
+                <!-- Cloud Development Projects -->
                 <div class="project-category">
-                    <!-- <h3>Cloud Projects</h3> -->
                     <div class="portfolio-grid">
+                        <div style="text-align: left; font-weight: bold;" id="cloud">Cloud Project</div>
                         <div class="portfolio-item">
                             <div class="portfolio-content1">
                                 <h4>AWS 기반 확장 가능한 동영상 플랫폼 관리 시스템</h4><br>
-                                <img src="images/project1Architecture.png" class="architecture-img-index">
+                                <img src="images/cloudproject/project1Architecture.png" class="architecture-img-index">
                                 <div class="skills-container">
                                     <div class="skills">
                                         <span class="skill-tag"><i class="fab fa-linux" aria-hidden="true"></i>&nbsp;Linux</span>
@@ -76,8 +81,8 @@
                         <div class="portfolio-item">
                             <div class="portfolio-content1">
                                 <h4>서버리스 아키텍처 기반 포트폴리오</h4><br>
-                                <img src="images/portfolioArchitecture.png" class="architecture-img2-index">
-                                <img src="images/serverlessArchitecture.png" class="architecture-img2-index">
+                                <img src="images/cloudproject/portfolioArchitecture.png" class="architecture-img2-index">
+                                <img src="images/cloudproject/serverlessArchitecture.png" class="architecture-img2-index">
                                 <div class="skills-container">
                                     <div class="skills">
                                         <span class="skill-tag"><i class="fab fa-linux" aria-hidden="true"></i>&nbsp;Linux</span>
@@ -95,13 +100,79 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                <!-- Web Development Projects -->
+                <div class="project-category">
+                    <div class="portfolio-grid">
+                        <div style="text-align: left; font-weight: bold;" id="Backend">Backend Project</div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-content2">
+                                <h4>자바 퀴즈 천국</h4><br>
+                                <img src="images/webproject/project1/ERD.png" class="architecture-img2-index">
+                                <div class="skills-container">
+                                    <div class="skills">
+                                        <span class="skill-tag"><i class="fab fa-java" aria-hidden="true"></i>&nbsp;Java</span>
+                                        <span class="skill-tag"><i class="fas fa-database" aria-hidden="true"></i>&nbsp;OracleDB</span>
+                                        <span class="skill-tag"><i class="fas fa-file-code" aria-hidden="true"></i>&nbsp;SQL</span>
+                                    </div>
+                                    <div class="likes-container">
+                                        <button type="button" class="addLikes" id="likesProject3">👍</button>
+                                        <span class="likes-count">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-content2">
+                                <h4>Food Cart</h4><br>
+                                <img src="images/webproject/project2/webproject2_ERD.png" class="architecture-img2-index">
+                                <img src="images/webproject/project2/webproject2_main.png" class="architecture-img2-index">
+                                <div class="skills-container">
+                                    <div class="skills">
+                                        <span class="skill-tag"><i class="fab fa-java" aria-hidden="true"></i>&nbsp;Java</span>
+                                        <span class="skill-tag"><i class="fab fa-html5" aria-hidden="true"></i>&nbsp;Html</span>
+                                        <span class="skill-tag"><i class="fab fa-css3" aria-hidden="true"></i>&nbsp;CSS</span>
+                                        <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i>&nbsp;JavaScript</span>
+                                        <span class="skill-tag"><i class="fas fa-database" aria-hidden="true"></i>&nbsp;OracleDB</span>
+                                        <span class="skill-tag"><i class="fas fa-file-code" aria-hidden="true"></i>&nbsp;SQL</span>
+                                    </div>
+                                    <div class="likes-container">
+                                        <button type="button" class="addLikes" id="likesProject4">👍</button>
+                                        <span class="likes-count">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="portfolio-content2">
+                                <h4>Fake Tube</h4><br>
+                                <img src="images/webproject/project3/ERD.png" class="architecture-img2-index">
+                                <img src="images/webproject/project3/main.png" class="architecture-img2-index">
+                                <div class="skills-container">
+                                    <div class="skills">
+                                        <span class="skill-tag"><i class="fab fa-java" aria-hidden="true"></i>&nbsp;Java</span>
+                                        <span class="skill-tag"><i class="fab fa-html5" aria-hidden="true"></i>&nbsp;Html</span>
+                                        <span class="skill-tag"><i class="fab fa-css3" aria-hidden="true"></i>&nbsp;CSS</span>
+                                        <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i>&nbsp;JavaScript</span>
+                                        <span class="skill-tag"><i class="fas fa-database" aria-hidden="true"></i>&nbsp;OracleDB</span>
+                                        <span class="skill-tag"><i class="fas fa-file-code" aria-hidden="true"></i>&nbsp;SQL</span>
+                                    </div>
+                                    <div class="likes-container">
+                                        <button type="button" class="addLikes" id="likesProject5">👍</button>
+                                        <span class="likes-count">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-item">
                 <h2>보유 기술</h2>
                 <div class="skill-container">
                     <div class="skill-item">
                         <div class="skill-left">
                             <div class="skill-icon">
-                                <img src="images/linux-icon.png" alt="Linux">
+                                <img src="images/icon/linux-icon.png" alt="Linux">
                             </div>
                             <div class="skill-title">Linux</div>
                         </div>
@@ -121,7 +192,7 @@
                     <div class="skill-item">
                         <div class="skill-left">
                             <div class="skill-icon">
-                                <img src="images/python-icon.png" alt="Python">
+                                <img src="images/icon/python-icon.png" alt="Python">
                             </div>
                             <div class="skill-title">Python</div>
                         </div>
@@ -141,7 +212,7 @@
                     <div class="skill-item">
                         <div class="skill-left">
                             <div class="skill-icon">
-                                <img src="images/java-icon.jpg" alt="Java">
+                                <img src="images/icon/java-icon.jpg" alt="Java">
                             </div>
                             <div class="skill-title">JAVA</div>
                         </div>
@@ -162,7 +233,7 @@
                     <div class="skill-item">
                         <div class="skill-left">
                             <div class="skill-icon">
-                                <img src="images/mariaDB-icon.png" alt="mariaDB">
+                                <img src="images/icon/mariaDB-icon.png" alt="mariaDB">
                             </div>
                             <div class="skill-title">mariaDB</div>
                         </div>
@@ -182,7 +253,7 @@
                     <div class="skill-item">
                         <div class="skill-left">
                             <div class="skill-icon">
-                                <img src="images/aws-icon.jpg" alt="AWS">
+                                <img src="images/icon/aws-icon.jpg" alt="AWS">
                             </div>
                             <div class="skill-title">AWS</div>
                         </div>
@@ -197,70 +268,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Web Development Projects -->
-                <!-- <div class="project-category">
-                    <h3>Web Development Projects</h3>
-                    <div class="portfolio-grid">
-                        <div class="portfolio-item">
-                            <div class="portfolio-content2">
-                                <h4>프로젝트 1</h4>
-                                <p>React를 사용한 SPA 웹사이트</p>
-                                <div class="skills-container">
-                                    <div class="skills">
-                                        <span class="skill-tag">React</span>
-                                        <span class="skill-tag">JavaScript</span>
-                                        <span class="skill-tag">CSS</span>
-                                    </div>
-                                    <div class="likes-container">
-                                        <button type="button" class="addLikes" id="likesProject3">👍</button>
-                                        <span class="likes-count">0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item">
-                            <div class="portfolio-content2">
-                                <h4>프로젝트 2</h4>
-                                <p>Django로 구현한 블로그 웹사이트</p>
-                                <div class="skills-container">
-                                    <div class="skills">
-                                        <span class="skill-tag">Django</span>
-                                        <span class="skill-tag">Python</span>
-                                        <span class="skill-tag">HTML</span>
-                                    </div>
-                                    <div class="likes-container">
-                                        <button type="button" class="addLikes" id="likesProject4">👍</button>
-                                        <span class="likes-count">0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item">
-                            <div class="portfolio-content2">
-                                <h4>프로젝트 3</h4>
-                                <p>Node.js로 구현한 API 서버</p>
-                                <div class="skills-container">
-                                    <div class="skills">
-                                        <span class="skill-tag">Node.js</span>
-                                        <span class="skill-tag">Express</span>
-                                        <span class="skill-tag">MongoDB</span>
-                                    </div>
-                                    <div class="likes-container">
-                                        <button type="button" class="addLikes" id="likesProject5">👍</button>
-                                        <span class="likes-count">0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-            <div class="about-item">
+                <br>
                 <h2>자격증</h2>
                 <div class="education-container">
                     <div class="logo">
-                        <img src="images/NCA_Logo.png" class="logoimg">
+                        <img src="images/logo/NCA_Logo.png" class="logoimg">
                     </div>
                     <div class="details">
                         <div class="title">NAVER Cloud Platform Certified Associate</div>
@@ -272,7 +284,7 @@
                 </div>
                 <div class="education-container">
                     <div class="logo">
-                        <img src="images/SQLD_Logo.png" class="logoimg">
+                        <img src="images/logo/SQLD_Logo.png" class="logoimg">
                     </div>
                     <div class="details">
                         <div class="title">SQL 개발자</div>
@@ -287,7 +299,7 @@
                 <!-- Certification details go here -->
                 <div class="education-container">
                     <div class="logo">
-                        <img src="images/itwill_Logo.png" class="logoimg">
+                        <img src="images/logo/itwill_Logo.png" class="logoimg">
                     </div>
                     <div class="details">
                         <div class="title">자바 개발자 양성 과정 144기</div>
@@ -305,8 +317,8 @@
                 </div>
                 <div class="education-container">
                     <div class="logo">
-                        <img src="images/양주시_Logo.png" class="logoimg">
-                        <img src="images/양주시청년센터_Logo.png" class="logoimg">
+                        <img src="images/logo/양주시_Logo.png" class="logoimg">
+                        <img src="images/logo/양주시청년센터_Logo.png" class="logoimg">
                     </div>
                     <div class="details">
                         <div class="title">2024년 클라우드 운영 전문가 과정</div>

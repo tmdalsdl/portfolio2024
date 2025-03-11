@@ -94,6 +94,21 @@ body {
     line-height: 1.5; /* 줄 간격 조정 */
 }
 
+@media (min-width: 1200px) {
+    html {
+        scroll-padding-top: 250px;
+    }
+}
+
+.sticky-nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sticky-nav:not(:last-child) {
+    margin-right: 30px;
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -109,6 +124,8 @@ body {
     transition: transform 0.3s;
     margin-bottom: 20px;
     border: 1px solid #e5e7eb;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .architecture-img-index,

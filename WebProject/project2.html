@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Food Cart</title>
+    <link rel="stylesheet" type="text/css" href="css/homeStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/projectStyle.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <section>
+                <div class="section-container">
+                    <h2 class="project-title">Food Cart</h2>
+                    <div class="skills">
+                        <span class="skill-tag"><i class="fab fa-java" aria-hidden="true"></i>&nbsp;Java</span>
+                        <span class="skill-tag"><i class="fab fa-html5" aria-hidden="true"></i>&nbsp;Html</span>
+                        <span class="skill-tag"><i class="fab fa-css3" aria-hidden="true"></i>&nbsp;CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js" aria-hidden="true"></i>&nbsp;JavaScript</span>
+                        <span class="skill-tag"><i class="fas fa-database" aria-hidden="true"></i>&nbsp;OracleDB</span>
+                        <span class="skill-tag"><i class="fas fa-file-code" aria-hidden="true"></i>&nbsp;SQL</span>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="section-container">
+                    <h2 class="section-title">구현 이미지</h2>
+                    <div class="modal">
+                        <div class="modalBox"></div>
+                    </div>
+                    <div class="architecture-container">
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_ERD.png" class="architecture-img">
+                            <figcaption>ERD</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_main.png" class="architecture-img">
+                            <figcaption>메인 화면</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_product.png" class="architecture-img">
+                            <figcaption>상품 상세 화면</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_basket.png" class="architecture-img">
+                            <figcaption>장바구니 화면</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_payment.png" class="architecture-img">
+                            <figcaption>결제 화면</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_orderlist.png" class="architecture-img">
+                            <figcaption>주문 목록 화면</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/webproject/project2/webproject2_adminpage.png" class="architecture-img">
+                            <figcaption>관리자의 회원관리 화면</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-container">
+                    <h2 class="section-title">프로젝트 개요</h2>
+                    <div class="content-wrapper1">
+                        <div class="subsection">
+                            이 프로젝트는 2023년 10월 18일부터 10월 31일까지 진행된 팀 협업 기반의 쇼핑몰 웹 애플리케이션 개발 프로젝트로, Tomcat 서버를 활용하여 인터넷 화면을 구현하고, 
+                            Controller와 Command 패턴을 사용해 Java 코드 구조를 정리하는 것을 목표로 하였습니다. 주요 기능으로는 회원 관리(회원가입, 정보 수정/삭제/조회), 상품 관리(등록, 수정, 검색, 리뷰), 
+                            주문 관리(장바구니, 결제 내역 조회) 및 고객센터(Q&A, FAQ)를 포함하며, 기본적인 쇼핑몰 기능을 담고 있으나 실제 결제 기능은 구현되지 않았습니다. 
+                            총 4인으로 구성된 팀에서 상품 관리 페이지(회원/비회원의 상품 상세보기 페이지, 관리자의 등록 및 수정 페이지), 메인 페이지의 상품 리스트 출력 및 회원 주문 목록 확인 등의 역할을 수행했습니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="section-container">
+                    <h2 class="section-title">기술 스택</h2>
+                    <div class="content-wrapper2">
+                        <div class="subsection">
+                            <h3>개발 환경</h3>
+                            <ul>
+                                <li>개발 언어: Java, SQL, HTML, CSS, JavaScript</li>
+                                <li>개발 도구: Eclipse, SQL Developer, Brackets</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>데이터베이스</h3>
+                            <ul>
+                                <li>Oracle DB server</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>라이브러리</h3>
+                            <ul>
+                                <li>ojdbc6</li>
+                                <li>jstl-1.2</li>
+                                <li>mybatis-3.5.13</li>
+                                <li>JQuery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="section-container">
+                    <h2 class="section-title">주요 구현 내용</h2>
+                    <div class="content-wrapper2">
+                        <div class="subsection">
+                            <h3>회원 관리 기능</h3>
+                            <ul>
+                                <li>회원가입, 로그인, 정보 수정 및 삭제 기능 구현</li>
+                                <li>회원 데이터는 Oracle Database에 저장 및 관리</li>
+                                <li>사용자 인증 및 권한 관리를 통해 보안 강화</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>상품 관리 기능</h3>
+                            <ul>
+                                <li>상품 등록, 수정, 삭제 및 검색 기능 제공</li>
+                                <li>상품 리뷰 작성 및 조회 기능 구현</li>
+                                <li>상품 데이터는 동적으로 출력되며 데이터베이스와 연동</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>주문 관리 기능</h3>
+                            <ul>
+                                <li>장바구니 추가 및 주문 내역 조회 기능 개발</li>
+                                <li>주문 데이터는 Oracle DB에 저장 및 관리</li>
+                                <li>사용자별 주문 이력을 확인할 수 있는 페이지 제공</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="section-container">
+                    <h2 class="section-title">개선 방향</h2>
+                    <div class="content-wrapper2">
+                        <div class="subsection">
+                            <h3>사용자 경험 향상</h3>
+                            <ul>
+                                <li>현재 기본적인 UI에서 벗어나 직관적이고 시각적인 인터페이스 제공</li>
+                                <li>반응형 웹 디자인을 도입하여 다양한 디바이스에서 최적화된 사용자 경험 제공</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>기능 및 성능 개선</h3>
+                            <ul>
+                                <li>결제 API(예: PayPal, Stripe) 연동을 통해 실제 결제 기능 추가</li>
+                                <li>데이터베이스 최적화를 통해 대규모 트래픽 처리 성능 개선</li>
+                            </ul>
+                        </div>
+                        <div class="subsection">
+                            <h3>데이터 활용 및 분석</h3>
+                            <ul>
+                                <li>사용자 구매 패턴 분석을 통해 추천 상품 시스템 도입</li>
+                                <li>데이터 시각화를 활용하여 판매 통계 및 트렌드 분석 가능하도록 개선</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script/projectScript.js"></script>
+</body>
+</html>
